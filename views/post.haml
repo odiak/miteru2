@@ -1,0 +1,11 @@
+%h1 みてるなう - 投稿画面
+
+%p= @title
+
+%form(method="post")
+  != csrf_tag
+  %input(type="hidden" id="title" value="#{@title}")
+  %input(type="hidden" id="url" value="#{@url}")
+  %input(type="text" id="comment" placeholder="コメントを入力" autofocus)
+  %br
+  %button(type="submit") 投稿

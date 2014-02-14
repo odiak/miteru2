@@ -1,0 +1,51 @@
+body {
+  padding: 0 5px;
+  background: #fbfbfb;
+  color: #444;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 30px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input[type=text],
+button {
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #888;
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type=text] {
+  width: 400px;
+  background: #fefefe;
+}
+
+input[type=text]:focus {
+  background: #fff;
+}
+
+button {
+  background: #ccc;
+}
+
+button:active {
+  background: #aaa;
+}
+
+pre.code {
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
