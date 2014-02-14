@@ -6,6 +6,6 @@
   != csrf_tag
   %input(type="hidden" id="title" value="#{@title}")
   %input(type="hidden" id="url" value="#{@url}")
-  %input(type="text" id="comment" placeholder="コメントを入力" autofocus)
+  %input(type="text" name="comment" placeholder="コメントを入力" autofocus)
   %br
   %button(type="submit") 投稿
