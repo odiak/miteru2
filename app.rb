@@ -72,10 +72,13 @@ post "/post" do
     config.access_token_secret = session[:oauth_secret]
   end
 
-  title = params[:title]
-  url = params[:url]
-  comment = params[:comment]
-  status = "#{comment && comment + " - "}#{title && title + " "}#{url}"
+  title = params[:title] || ""
+  url = params[:url] || ""
+  comment = params[:comment] || ""
+  status = ""
+  status << comment << "-" unless comment.empty?
+  status << title << " " unless title.empty?
+  status << url
   begin
     client.update(status)
   rescue Twitter::Error::ClientError
