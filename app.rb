@@ -76,7 +76,7 @@ post "/post" do
   url = params[:url] || ""
   comment = params[:comment] || ""
   status = ""
-  status << comment << "-" unless comment.empty?
+  status << comment << " - " unless comment.empty?
   status << title << " " unless title.empty?
   status << url
   begin
