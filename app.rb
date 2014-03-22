@@ -81,7 +81,8 @@ post "/post" do
   status << url
   begin
     client.update(status)
-  rescue Twitter::Error::ClientError
+  rescue Twitter::Error => e
+    $stderr.puts e
     redirect to "/failure"
   else
     redirect to "/success"
