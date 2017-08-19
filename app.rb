@@ -3,7 +3,8 @@
 
 require "bundler"
 Bundler.require
-require "./settings"
+
+require "./config"
 
 configure do
   set :app_file, __FILE__
