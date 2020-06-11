@@ -1,0 +1,6 @@
+runtime: ruby25
+env: standard
+entrypoint: bundle exec ruby app.rb
+
+includes:
+  - secrets.yaml
